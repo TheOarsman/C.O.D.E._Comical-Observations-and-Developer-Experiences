@@ -15,6 +15,9 @@ Your task this week is to build a CMS-style blog site similar to a Wordpress sit
 - [Tabel of Contents](#tabel-of-contents)<br>
 - [User Story](#user-story)<br>
 - [Acceptance Criteria](#acceptance-criteria)<br>
+- [Installation](#instllation)<br>
+- [Usage](#usage)<br>
+- [Technologies](Technologies)
 - [License](#license)<br>
 - [Contributing](#contributing)<br>
 - [Tests](#tests)<br>
@@ -80,6 +83,36 @@ Your task this week is to build a CMS-style blog site similar to a Wordpress sit
 
 **WHEN** I am idle on the site for more than a set time <br>
 **THEN** I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
+
+## Installation
+
+No installation needed. App is deplayed on Heroku.
+
+## Usage
+
+App can be viewed at **\*\***\_\_\_\_**\*\***.
+
+## Technologies
+
+![Javascript](https://img.shields.io/badge/-JavaScript-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)
+
+![MySQL](https://img.shields.io/badge/-MySql-4479a1?style=for-the-badge&logo=mysql&logoColor=white)
+
+![Insomnia](https://img.shields.io/badge/-Insomnia-5849BE?style=for-the-badge&logo=insomnia&logoColor=white)
+
+![Heroku](https://img.shields.io/badge/-Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+
+The following npm packages were also used:
+
+`express.js`<br><br>
+`dotenv`<br><br>
+`Sequelize`<br><br>
+`bcrypt`<br><br>
+`express-handlebars`<br><br>
+`express-session`<br><br>
+`connect-session-sequelize`
 
 ## License
 
