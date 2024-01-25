@@ -158,10 +158,10 @@ None currently
 
 ## Questions/Contact
 
-Developer: Heinz Ulrich V
+<h4>Developer: Heinz Ulrich V</h4>
 
-GitHub: [TheOarsman](https://www.github.com/TheOarsman)
+![Alt text](image-2.png)&emsp;[TheOarsman](https://www.github.com/TheOarsman)
 
-LinkedIn: [Heinz Ulrich V](https://www.linkedin.com/in/heinz-ulrich-v-3a3486a0/)
+![LinkedIn Logo](image.png)&emsp;[Heinz Ulrich V](https://www.linkedin.com/in/heinz-ulrich-v-3a3486a0/)
 
-E-Mail: <heinzulrichv@gmail.com>
+![Alt text](image-1.png)&emsp;<heinzulrichv@gmail.com>
