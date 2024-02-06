@@ -1,4 +1,5 @@
 <html lang='en'>
+
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -9,7 +10,8 @@
     />
     <link rel='stylesheet' href='/css/style.css' />
   </head>
-  <body class='flex-column'>
+
+  <body class='flexColumn'>
     <navclass='navigationBar'>
       <ul class='flex-links'>
         <li class='linksInline navigationLink'><a href='/'>Home</a></li>
@@ -29,9 +31,23 @@
       {{/if}}
     </header>
 
-    <main class=''>
+    <main class='mainColoumnFlex'>
       {{{body}}}
     </main>
 
+    {{#if dashboard}}
+    <footer class='footer flexRow justify-center'>
+      <a href='/dashboard/new'>🆕 C.O.D.E.</a>
+    </footer>
+    {{else}}
+    <footer class='flexRow justify-center'>
+      &copy; C.O.D.E. Nuts
+    </footer>
+    {{/if}}
+
+    {{#if loggedIn}}
+    <script src='/js/logout.js'></script>
+    {{if}}
   </body>
+  
 </html>

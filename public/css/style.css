@@ -1,12 +1,12 @@
 :root {
-  --text: white;
-  --burntOrange: rgb(234, 94, 0);
+  --txt: white;
+  --UT: rgb(234, 94, 0);
 }
 
 .navigationBar {
   width: 100%;
   position: fixed;
-  background-color: var(--burntOrange);
+  background-color: var(--UT);
 }
 
 .linksInline {
@@ -18,27 +18,37 @@
 }
 
 .naviagtionLink a {
-  color: var(--text);
+  color: var(--txt);
 }
 
 .header {
   padding: 3% 4%;
-  background-color: var(--burntOrange);
-  color: var(--text);
+  background-color: var(--UT);
+  color: var(--txt);
 }
 
 .codeName {
   font-size: 3rem;
-  background-color: var(--text);
-  color: var(--burntOrange);
+  background-color: var(--txt);
+  color: var(--UT);
   padding: 0 10px;
   display: inline-block;
   border-radius: var(--border-radius);
   box-shadow: 6px 5px var(--light-dark);
 }
 
+.footer a {
+  display: inline-block;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  background-color: var(--UT);
+  color: var(--txt);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+}
+
 /* THINGS NEEDING FLEXING */
-.flex-clolumn {
+.flexClolumn {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -47,4 +57,17 @@
 .flex-links {
   display: flex;
   flex-wrap: wrap;
+}
+
+.mainColoumnFlex {
+  flex-grow: 1;
+}
+
+.flexRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
 }
