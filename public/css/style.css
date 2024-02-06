@@ -1,11 +1,12 @@
 :root {
-  --primary: white;
+  --text: white;
+  --burntOrange: rgb(234, 94, 0);
 }
 
 .navigationBar {
   width: 100%;
   position: fixed;
-  background-color: rgb(234, 94, 0);
+  background-color: var(--burntOrange);
 }
 
 .linksInline {
@@ -13,11 +14,27 @@
 }
 
 .naviagtionLink {
-  margin: 0 40px;
+  margin: 0 45px;
 }
 
 .naviagtionLink a {
-  color: var(--primary);
+  color: var(--text);
+}
+
+.header {
+  padding: 3% 4%;
+  background-color: var(--burntOrange);
+  color: var(--text);
+}
+
+.codeName {
+  font-size: 3rem;
+  background-color: var(--text);
+  color: var(--burntOrange);
+  padding: 0 10px;
+  display: inline-block;
+  border-radius: var(--border-radius);
+  box-shadow: 6px 5px var(--light-dark);
 }
 
 /* THINGS NEEDING FLEXING */

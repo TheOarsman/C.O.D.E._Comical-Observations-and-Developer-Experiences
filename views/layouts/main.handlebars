@@ -16,11 +16,18 @@
         <li class='linksInline navigationLink'><a href='/content'>Content</a></li>
         {{#if loggedIn}}
         <li class='linksInline navigationLink'><a href='#' id='logout'>Logout</a></li>
-        {{#else}}
+        {{else}}
         <li class='linksInline navigationLink'><a href='/login'>Login</a></li>
-        {{#if}}
+        {{/if}}
       </ul>
     </nav>
+    <header class='header'>
+      {{#if dashboard}}
+      <h1 class='codeName'><a href='/dashboard'>Your Dashboard</a></h1>
+      {{else}}
+      <h1 class='codeName'><a href='/'>Other C.O.D.E.</a></h1>
+      {{/if}}
+    </header>
 
   </body>
 </html>
