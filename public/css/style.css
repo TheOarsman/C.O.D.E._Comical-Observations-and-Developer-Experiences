@@ -1,6 +1,33 @@
-/* FLEXING */
+:root {
+  --primary: white;
+}
+
+.navigationBar {
+  width: 100%;
+  position: fixed;
+  background-color: rgb(234, 94, 0);
+}
+
+.linksInline {
+  display: inline;
+}
+
+.naviagtionLink {
+  margin: 0 40px;
+}
+
+.naviagtionLink a {
+  color: var(--primary);
+}
+
+/* THINGS NEEDING FLEXING */
 .flex-clolumn {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-links {
+  display: flex;
   flex-wrap: wrap;
 }

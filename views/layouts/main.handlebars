@@ -9,7 +9,18 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
+  <body class='flex-column'>
+    <navclass='navigationBar'>
+      <ul class='flex-links'>
+        <li class='linksInline navigationLink'><a href='/'>Home</a></li>
+        <li class='linksInline navigationLink'><a href='/content'>Content</a></li>
+        {{#if loggedIn}}
+        <li class='linksInline navigationLink'><a href='#' id='logout'>Logout</a></li>
+        {{#else}}
+        <li class='linksInline navigationLink'><a href='/login'>Login</a></li>
+        {{#if}}
+      </ul>
+    </nav>
 
   </body>
 </html>
