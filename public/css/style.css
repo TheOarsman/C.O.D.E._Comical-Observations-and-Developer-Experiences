@@ -1,0 +1,6 @@
+/* FLEXING */
+.flex-clolumn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
