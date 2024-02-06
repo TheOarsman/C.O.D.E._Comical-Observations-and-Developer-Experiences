@@ -160,8 +160,8 @@ None currently
 
 <h4>Developer: Heinz Ulrich V</h4>
 
-![Alt text](image-2.png)&emsp;[TheOarsman](https://www.github.com/TheOarsman)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)&emsp;[TheOarsman](https://www.github.com/TheOarsman)
 
-![LinkedIn Logo](image.png)&emsp;[Heinz Ulrich V](https://www.linkedin.com/in/heinz-ulrich-v-3a3486a0/)
+&emsp;[Heinz Ulrich V](https://www.linkedin.com/in/heinz-ulrich-v-3a3486a0/)
 
-![Alt text](image-1.png)&emsp;<heinzulrichv@gmail.com>
+&emsp;<heinzulrichv@gmail.com>
