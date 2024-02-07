@@ -68,4 +68,11 @@ User.init(
   }
 );
 
+User.associate = (models) => {
+  User.hasMany(models.Rating, {
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
+  });
+};
+
 module.exports = User;

@@ -23,6 +23,14 @@ Post.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+
+    rating: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    star_average: {
+      type: DataTypes.DECIMAL(3, 2),
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
