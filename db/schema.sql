@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS comObsDevEpx_db;
+CREATE DATABASE comObsDevEpx_db;
