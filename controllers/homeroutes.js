@@ -1,43 +1,59 @@
-const router = require("express").Router();
-const { User, Post, Comment, Star } = require("../models");
-const withAuth = require("../utils/auth");
+const router = require('express').Router();
+const { Post, Comment, User } = require('../models/');
+const { withGuard, withoutGuard } = require('../utils/authGuard');
 
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
-        include: [{ model: User }, {model: Comment }], 
-      });
-      let userData;
-      let user;
-      if (req.session.logged_in) {
-        userData = await User.findByPk(req.session.user_id, {
-          attributes: { exclude: ['password'] },
-        });
-         user = userData.get({ plain: true });
-      } else {
-        user = {}
-      }
-    const posts = postData.map(post => post.get({ plain: true }));
-
-    res.render('homepage', {
-      ...user,
-      posts,
-      chat_name: user.user_name,
-      logged_in: req.session.logged_in,
+      include: [User],
     });
+
+    const posts = postData.map((post) => post.get({ plain: true }));
+
+    res.render('home', { posts, loggedIn: req.session.logged_in });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get("/login", (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect("/");
-    return;
-  }
+router.get('/post/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        User,
+        {
+          model: Comment,
+          include: [User],
+        },
+      ],
+    });
 
-  res.render("login");
+    if (postData) {
+      const post = postData.get({ plain: true });
+
+      res.render('post', { post, loggedIn: req.session.logged_in });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/login', withoutGuard, (req, res) => {
+  try {
+    res.render('login');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/signup', withoutGuard, (req, res) => {
+  try {
+    res.render('signup');
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

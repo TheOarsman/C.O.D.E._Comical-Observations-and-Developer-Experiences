@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
+const sequelize = require('../config/connection');
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -16,27 +16,9 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    first_name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: "SillyLand",
-    },
-    last_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: "Bot",
-    },
-    user_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
     },
     password: {
       type: DataTypes.STRING,
@@ -61,18 +43,10 @@ User.init(
       },
     },
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: 'user',
   }
 );
-
-User.associate = (models) => {
-  User.hasMany(models.Rating, {
-    foreignKey: "user_id",
-    onDelete: "CASCADE",
-  });
-};
 
 module.exports = User;

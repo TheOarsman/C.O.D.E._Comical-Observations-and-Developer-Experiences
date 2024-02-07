@@ -1,49 +1,52 @@
-const router = require("express").Router();
-const { User, Post, Comment, Star } = require("../../models");
+const router = require('express').Router();
+const { Post } = require('../../models/');
+const { apiGuard } = require('../../utils/authGuard');
 
-router.get("/", (req, res) => {
-  Post.findAll({ include: [User, Comment, Star] }).then((data) => {
-    res.json(data);
-  });
+router.post('/', apiGuard, async (req, res) => {
+  const body = req.body;
+
+  try {
+    const newPost = await Post.create({ ...body, userId: req.session.user_id });
+    res.json(newPost);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
-router.post("/", (req, res) => {
-  const postObject = {
-    title: req.body.title,
-    description: req.body.description,
-    user_id: req.session.user_id,
-  };
-  Post.create(postObject).then((postData) => {
-    res.json(postData);
-  });
+router.put('/:id', apiGuard, async (req, res) => {
+  try {
+    const [affectedRows] = await Post.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (affectedRows > 0) {
+      res.status(200).end();
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
-router.post("/stars", async (req, res) => {
-  const newStarRating = await Star.create(req.body);
-  // console.log(req.body.post_id)
-  const targetedPost = await Post.findOne({
-    where: { id: req.body.post_id },
-    include: [Star],
-  });
-  let totalStars = 0;
+router.delete('/:id', apiGuard, async (req, res) => {
+  try {
+    const [affectedRows] = Post.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
 
-  let starEntries = targetedPost.stars.length;
-  console.log(starEntries);
-  targetedPost.stars.forEach((star) => {
-    totalStars += star.star_num;
-    
-  });
-  let averageStars = 0;
-  averageStars = (totalStars / starEntries).toFixed(2);
-// console.log(averageStars);
-  const updatedPost = await Post.update({star_average:averageStars}, {where: {id:req.body.post_id}})
-res.json(updatedPost)
-});
-
-router.delete("/:id", (req, res) => {
-  Post.destroy({ where: { id: req.params.id } }).then((response) => {
-    res.json(response);
-  });
+    if (affectedRows > 0) {
+      res.status(200).end();
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
