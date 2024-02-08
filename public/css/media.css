@@ -1,0 +1,14 @@
+/* _____login and signup__________________________________________ */
+
+.row {
+  flex-direction: column;
+}
+
+.signupLogin {
+  margin-bottom: 20px;
+}
+
+.row .col-md-5 {
+  width: 90%;
+  margin: 0 auto 20px;
+}
