@@ -1,53 +1,57 @@
-<html lang='en'>
+<html lang="en">
 
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>C.O.D.E.</title>
     <link
-      href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap'
-      rel='stylesheet'
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
+      rel="stylesheet"
     />
-    <link rel='stylesheet' href='/css/style.css' />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
-  <body class='flexColumn'>
-    <navclass='navigationBar'>
-      <ul class='flex-links'>
-        <li class='linksInline navigationLink'><a href='/'>Home</a></li>
-        <li class='linksInline navigationLink'><a href='/content'>Content</a></li>
+  <body class="flexColumn vh-100">
+    <nav class="navigationBar">
+      <ul class="flex-links">
+        <li class="linksInline menu-link"><a href="/">Home</a></li>
+        <li class="linksInline menu-link"><a href="/content">Dashboard</a></li>
         {{#if loggedIn}}
-        <li class='linksInline navigationLink'><a href='#' id='logout'>Logout</a></li>
+          <li class="linksInline menu-link"><a
+              href="#"
+              id="logout"
+            >Logout</a></li>
         {{else}}
-        <li class='linksInline navigationLink'><a href='/login'>Login</a></li>
+          <li class="linksInline menu-link"><a href="/login">Login</a></li>
         {{/if}}
       </ul>
     </nav>
-    <header class='header'>
+    <header class="header">
       {{#if dashboard}}
-      <h1 class='codeName'><a href='/dashboard'>Your Dashboard</a></h1>
+        <h1 class="codeName"><a href="/dashboard">Your Dashboard</a></h1>
       {{else}}
-      <h1 class='codeName'><a href='/'>C.O.D.E. - Comical Observations and Developer Experiences</a></h1>
+        <h1 class="codeName"><a href="/">C.O.D.E. - Comical Observations and
+            Developer Experiences</a></h1>
       {{/if}}
     </header>
 
-    <main class='mainColoumnFlex'>
+    <main class="mainColoumnFlex">
       {{{body}}}
     </main>
 
     {{#if dashboard}}
-    <footer class='footer flexRow justify-center'>
-      <a href='/dashboard/new'>🆕 C.O.D.E.</a>
-    </footer>
+      <footer class="footer flex-links center-align">
+        <a href="/dashboard/new">🆕 C.O.D.E.</a>
+      </footer>
     {{else}}
-    <footer class='flexRow justify-center'>
-      &copy; C.O.D.E. - Comical Observations and Developer Experiences
-    </footer>
+      <footer class="flex-links center-align">
+        &copy; C.O.D.E. - Comical Observations and Developer Experiences
+      </footer>
     {{/if}}
 
     {{#if loggedIn}}
-    <script src='/js/logout.js'></script>
+      <script src="/js/logout.js"></script>
     {{/if}}
   </body>
-  
+
 </html>

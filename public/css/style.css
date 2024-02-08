@@ -1,6 +1,10 @@
 :root {
   --txt: white;
   --UT: rgb(234, 94, 0);
+  --tertiary: #788585;
+  --light-dark: #6f6866;
+  --dark: #38302e;
+  --border-radius: 0.3rem;
 }
 
 .navigationBar {
@@ -13,11 +17,11 @@
   display: inline;
 }
 
-.naviagtionLink {
-  margin: 0 45px;
+.menu-link {
+  margin: 0 35px;
 }
 
-.naviagtionLink a {
+.menu-link a {
   color: var(--txt);
 }
 
@@ -27,14 +31,22 @@
   color: var(--txt);
 }
 
+.header p {
+  max-width: 75%;
+}
+
 .codeName {
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: var(--txt);
   color: var(--UT);
   padding: 0 10px;
   display: inline-block;
   border-radius: var(--border-radius);
   box-shadow: 6px 5px var(--light-dark);
+}
+
+.codeName a {
+  color: var(--dark);
 }
 
 .footer a {
@@ -48,7 +60,7 @@
 }
 
 /* THINGS NEEDING FLEXING */
-.flexClolumn {
+.flexColumn {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -68,8 +80,13 @@
   flex-wrap: wrap;
 }
 
-.justify-center {
+.center-align {
   justify-content: center;
+}
+
+/* UTILZ for Height/Width */
+.vh-100 {
+  min-height: 100vh;
 }
 
 /* _____________________________________
@@ -125,7 +142,7 @@ body header {
 }
 
 body {
-  background-image: url("https://cdnblog.picsart.com/2020/04/funny-virtual-zoom-background-.jpg");
+  /* background-image: url("https://cdnblog.picsart.com/2020/04/funny-virtual-zoom-background-.jpg"); */
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -169,18 +186,7 @@ body {
   outline: none;
   color: #fff;
 }
-#messages {
-  overflow-y: auto;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  max-height: 175px;
-}
 
-#messages > li {
-  padding: 0.5rem 1rem;
-  background: #efefef;
-}
 .hide {
   display: none;
 }
