@@ -6,35 +6,35 @@
   --dark: #38302e;
   --border-radius: 0.3rem;
 }
-
+/* working */
 .navigationBar {
   width: 100%;
   position: fixed;
   background-color: var(--UT);
 }
-
+/* working */
 .linksInline {
   display: inline;
 }
-
+/* working */
 .menu-link {
   margin: 0 35px;
 }
-
+/* working */
 .menu-link a {
   color: var(--txt);
 }
-
+/* working */
 .header {
   padding: 3% 4%;
   background-color: var(--UT);
   color: var(--txt);
 }
-
+/* working */
 .header p {
   max-width: 75%;
 }
-
+/* working */
 .codeName {
   font-size: 2rem;
   background-color: var(--txt);
@@ -44,11 +44,11 @@
   border-radius: var(--border-radius);
   box-shadow: 6px 5px var(--light-dark);
 }
-
+/* working */
 .codeName a {
   color: var(--dark);
 }
-
+/* working */
 .footer a {
   display: inline-block;
   padding: 1em;
@@ -60,37 +60,35 @@
 }
 
 /* THINGS NEEDING FLEXING */
+/* working */
 .flexColumn {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-
+/* working */
 .flex-links {
   display: flex;
   flex-wrap: wrap;
 }
-
+/* working */
 .mainColoumnFlex {
   flex-grow: 1;
 }
-
-.flexRow {
-  display: flex;
-  flex-wrap: wrap;
-}
-
+/* working */
 .center-align {
   justify-content: center;
 }
 
 /* UTILZ for Height/Width */
+/* working */
 .vh-100 {
   min-height: 100vh;
 }
 
 /* _____________________________________
 Sign up and login style */
+/* working */
 .signupLogin {
   color: whitesmoke;
   font-family: "Press Start 2P", system-ui;
@@ -102,7 +100,7 @@ Sign up and login style */
   height: max-content;
   border: solid whitesmoke 2px;
 }
-
+/* working */
 .signupLogin h2 {
   text-align: center;
   padding-bottom: 20px;
@@ -206,25 +204,8 @@ body {
   font-weight: bold;
 }
 
-/* _____________________________________
-Sign up and login style */
-.signupLogin {
-  color: whitesmoke;
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  background-color: rgba(1, 11, 18, 0.8);
-  padding: 15px;
-  border-radius: 15px;
-  height: max-content;
-  border: solid whitesmoke 2px;
-}
-
-.signupLogin h2 {
-  text-align: center;
-  padding-bottom: 20px;
-}
 /* __________________________________________________________ */
+/* working */
 .row {
   display: flex;
   justify-content: space-around;
@@ -240,7 +221,7 @@ Sign up and login style */
   flex: 1;
   margin-right: 100px;
 }
-
+/* working */
 .form-input {
   color: black;
 }

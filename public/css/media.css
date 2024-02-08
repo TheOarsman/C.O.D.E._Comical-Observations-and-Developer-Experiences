@@ -99,6 +99,7 @@
   .project h2 {
     font-size: 24px;
   }
+  /* working */
   .project .col-md-5,
   .project .col-md-7 {
     text-align: center;
@@ -146,11 +147,11 @@
   .row {
     flex-direction: column;
   }
-
+  /* working */
   .signupLogin {
     margin-bottom: 20px;
   }
-
+  /* working */
   .row .col-md-5 {
     width: 90%;
     margin: 0 auto 20px;
