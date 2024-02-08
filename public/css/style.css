@@ -90,3 +90,248 @@ Sign up and login style */
   text-align: center;
   padding-bottom: 20px;
 }
+
+/* ------ Adding in styling ---- Need to Correct As Necessary ---
+
+/* __Header and body Styling__________________________________________ */
+
+.display-flex.justify-space-between.align-center.p-2 {
+  background-color: rgba(255, 255, 255, 0);
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-size: xx-large;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 4px;
+}
+
+header h1 a:hover {
+  color: whitesmoke;
+}
+
+body header {
+  margin: 0;
+  padding: 0;
+  transition: font-size 0.3s ease;
+}
+
+body {
+  background-image: url("https://cdnblog.picsart.com/2020/04/funny-virtual-zoom-background-.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* _________________________________________________________________________ */
+
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+#input:focus {
+  outline: none;
+}
+
+#form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  width: 600px;
+  height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+#form > button {
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  /* border-radius: 3px; */
+  outline: none;
+  color: #fff;
+}
+#messages {
+  overflow-y: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 175px;
+}
+
+#messages > li {
+  padding: 0.5rem 1rem;
+  background: #efefef;
+}
+.hide {
+  display: none;
+}
+#chat {
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(1, 11, 18, 0.8);
+  border-radius: 15px;
+  border: solid whitesmoke 2px;
+}
+
+.username {
+  color: red;
+  font-weight: bold;
+}
+
+/* _____________________________________
+Sign up and login style */
+.signupLogin {
+  color: whitesmoke;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgba(1, 11, 18, 0.8);
+  padding: 15px;
+  border-radius: 15px;
+  height: max-content;
+  border: solid whitesmoke 2px;
+}
+
+.signupLogin h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* __________________________________________________________ */
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+#profileCard {
+  background-color: rgba(1, 11, 18, 0.8);
+  color: whitesmoke;
+  border-radius: 25px;
+}
+
+.column {
+  flex: 1;
+  margin-right: 100px;
+}
+
+.form-input {
+  color: black;
+}
+
+.login-link {
+  color: whitesmoke;
+  transition: font-size 0.3s ease;
+}
+
+.login-link:hover {
+  color: whitesmoke;
+}
+
+/* _________________Homepage Style____________________________________________ */
+
+.project {
+  background-color: rgba(1, 11, 18, 0.8);
+  margin: 25px;
+  border-radius: 15px;
+  border: solid whitesmoke 2px;
+}
+
+.project h2 a,
+p {
+  color: whitesmoke;
+}
+
+.project p {
+  font-size: large;
+}
+
+.post-content p {
+  font-size: large;
+  padding-top: 25px;
+}
+
+nav a {
+  font-size: xx-large;
+  color: whitesmoke;
+}
+
+nav a:hover {
+  color: whitesmoke;
+}
+
+/* ___________________________________________________________________ */
+
+.single-post {
+  background-color: rgba(1, 11, 18, 0.8);
+  border-radius: 15px;
+  border: solid whitesmoke 2px;
+}
+
+.single-post h2 {
+  color: whitesmoke;
+  font-size: xx-large;
+  padding-bottom: 25px;
+  padding-top: 15px;
+  text-decoration: underline;
+}
+
+.single-post h4 {
+  color: whitesmoke;
+  font-style: italic;
+  font-size: x-large;
+}
+
+.single-post p {
+  font-size: x-large;
+  padding-bottom: 25px;
+}
+
+.single-post h5 {
+  color: whitesmoke;
+  font-size: x-large;
+}
+
+.current-post {
+  border-top: solid whitesmoke 2px;
+  padding-bottom: 10px;
+}
+.current-post h4 a {
+  color: whitesmoke;
+  font-size: x-large;
+}
+
+.current-post h5 {
+  font-size: large;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.btn.btn-lg.btn-danger.rate {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.btn.btn-lg.btn-danger.delete {
+  margin-top: 10px;
+}
